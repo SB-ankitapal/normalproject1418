@@ -167,6 +167,56 @@ paths:
               dateOfBirth: '1996-08-24'
       x-stoplight:
         id: hli9uvv34sfw3
+  /user/test:
+    get:
+      summary: Your GET endpoint
+      tags: []
+      responses: {}
+      operationId: get-user-test
+      x-stoplight:
+        id: swpzne3k0iiu8
+    options:
+      summary: Your OPTIONS endpoint
+      tags: []
+      responses:
+        '205':
+          description: Reset Content
+          schema:
+            allOf:
+              - x-stoplight:
+                  id: qwazh79cb44fr
+                properties:
+                  testng:
+                    type: string
+                    x-stoplight:
+                      id: n0n5sz8q0ifln
+                  selenium:
+                    type: string
+                    x-stoplight:
+                      id: msgivv7t00ztd
+                  resRef1:
+                    $ref: 'stoplight://resources/overrides/4nA6w9xzuwM'
+                  resRef2:
+                    $ref: 'stoplight://resources/overrides/PDrDmNurim8'
+                  resRef3:
+                    $ref: 'stoplight://resources/overrides/AAK8BEvhVvQ'
+            type: object
+      operationId: options-user-test
+      x-stoplight:
+        id: acbtxuynfoiii
+      parameters:
+        - in: body
+          name: body
+          schema:
+            allOf:
+              - properties:
+                  reqRef1:
+                    $ref: 'stoplight://resources/overrides/4nA6w9xzuwM'
+                  reqRef2:
+                    $ref: 'stoplight://resources/overrides/PDrDmNurim8'
+                  reqRef3:
+                    $ref: 'stoplight://resources/overrides/AAK8BEvhVvQ'
+            type: object
 definitions:
   User:
     title: User
