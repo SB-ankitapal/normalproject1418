@@ -217,6 +217,7 @@ paths:
                   reqRef3:
                     $ref: 'stoplight://resources/overrides/AAK8BEvhVvQ'
             type: object
+          description: Option request
 definitions:
   User:
     title: User
