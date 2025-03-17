@@ -204,20 +204,28 @@ paths:
       operationId: options-user-test
       x-stoplight:
         id: acbtxuynfoiii
+      parameters: []
+    put:
+      summary: Your PUT endpoint
+      tags: []
+      responses: {}
+      operationId: put-user-test
+      x-stoplight:
+        id: 16ntshml90dwm
       parameters:
         - in: body
           name: body
           schema:
             allOf:
               - properties:
-                  reqRef1:
+                  reqref1:
                     $ref: 'stoplight://resources/overrides/4nA6w9xzuwM'
-                  reqRef2:
+                  reqref2:
                     $ref: 'stoplight://resources/overrides/PDrDmNurim8'
-                  reqRef3:
+                  reqref3:
                     $ref: 'stoplight://resources/overrides/AAK8BEvhVvQ'
             type: object
-          description: Option request
+          description: Put request
 definitions:
   User:
     title: User
