@@ -26,7 +26,17 @@ paths:
         '200':
           description: User Found
           schema:
-            $ref: '#/definitions/User'
+            allOf:
+              - x-stoplight:
+                  id: k724ilw5gjnxi
+                properties:
+                  resRef:
+                    $ref: 'stoplight://resources/overrides/4nA6w9xzuwM'
+                  resRef2:
+                    $ref: 'stoplight://resources/overrides/PDrDmNurim8'
+                  resRef3:
+                    $ref: 'stoplight://resources/overrides/AAK8BEvhVvQ'
+            type: object
           examples:
             Get User Alice Smith:
               id: 142
@@ -45,6 +55,19 @@ paths:
       description: Retrieve the information of the user with the matching user ID.
       x-stoplight:
         id: bmqsi80zipxf6
+      parameters:
+        - in: body
+          name: body
+          schema:
+            allOf:
+              - properties:
+                  reqRef1:
+                    $ref: 'stoplight://resources/overrides/4nA6w9xzuwM'
+                  reqRef2:
+                    $ref: 'stoplight://resources/overrides/PDrDmNurim8'
+                  reqRef3:
+                    $ref: 'stoplight://resources/overrides/AAK8BEvhVvQ'
+            type: object
     patch:
       summary: Update User Information
       operationId: patch-users-userId
